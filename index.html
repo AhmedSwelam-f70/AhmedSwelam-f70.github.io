@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="ar">
+<head>
+  <script>
+    fetch('shared-layout-header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('shared-layout-header').innerHTML = data;
+        });
+</script>
+
+            <script>
+                fetch('shared-layout-footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('shared-layout-footer').innerHTML = data;
+                    });
+            </script>
+</head>
+
+<body>
+    <!--Header link Area-->
+    <div id="shared-layout-header"></div>
+  
+    <!--Analytics Area-->
+        <div class="analytics-area mg-tb-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left side bar Start - الجزء الخاص بالإحصائيات المحافظات-->
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                        <div class="applicants-chart te">
+                            <div class="portlet-title text-right">
+                                <div class="row text">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject text-uppercase"><b>المتقدمين حسب المحافظات</b></span>
+                                        </div>
+                                    </div>
+                                    <!-- Graph Chart Start -->
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="actions graph-rp">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right side bar End -->
+
+                    <!-- right side bar Start - الجزء الخاص بالغحصائيات علي اليسار-->
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-right">
+                        <div class="white-box analytics-info-cs mg-b-30 res-mg-t-30">
+                            <h3 class="box-title">إجمالي زيارات الإستمارة</h3>
+                            <ul class="list-inline two-part-sp">
+                                <!-- Only image dont change here - هتلاقي الجافا السكريبت الخاص بالجزء ده في ملف اسمه jquery.charts.sparkline / line 195-->
+                                <li>
+                                    <div id="sparklinedash"></div>
+                                </li>
+                                <!-- Only change here - عدل هنا عند استدعاء البيانات من قاعدة البيانات الجزء اللي فوق منظر بس-->
+                                <li class="text-right sp-cn-r"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter sales-sts-ctn">8659</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs mg-b-30">
+                            <h3 class="box-title">إجمالي المتقدمين</h3>
+                            <ul class="list-inline two-part-sp">
+                                <!-- Only image dont change here - هتلاقي الجافا السكريبت الخاص بالجزء ده في ملف اسمه jquery.charts.sparkline / line 195-->
+                                <li>
+                                    <div id="sparklinedash2"></div>
+                                </li>
+                                <!-- Only change here - عدل هنا عند استدعاء البيانات من قاعدة البيانات الجزء اللي فوق منظر بس-->
+                                <li class="text-right"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter sales-sts-ctn">7469</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs mg-b-30">
+                            <h3 class="box-title">إجمالي الأعضاء</h3>
+                            <!-- Only image dont change here - هتلاقي الجافا السكريبت الخاص بالجزء ده في ملف اسمه jquery.charts.sparkline / line 195-->
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash3"></div>
+                                </li>
+                                <!-- Only change here - عدل هنا عند استدعاء البيانات من قاعدة البيانات الجزء اللي فوق منظر بس-->
+                                <li class="text-right"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter sales-sts-ctn">6011</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- right side bar End -->
+
+                </div>
+            </div>
+        </div>
+
+            <!--Footer link Area-->
+            <div id="shared-layout-footer"></div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Modal</title>
+    <style>
+        /* Basic styles for the modal */
+        #idCardModal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #idCard {
+            background: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 300px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="idCardModal">
+    <div id="idCard">
+        <h2>ID Card</h2>
+        <p>Name: John Doe</p>
+        <p>Position: Developer</p>
+        <p>Company: Example Inc.</p>
+        <button onclick="printIDCard()">Print ID Card</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<!-- Button to open modal -->
+<button onclick="openModal()">Open ID Card</button>
+
+<script>
+    function openModal() {
+        document.getElementById('idCardModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('idCardModal').style.display = 'none';
+    }
+
+    // Print function
+    function printIDCard() {
+        const printContent = document.getElementById('idCard').innerHTML;
+        const newWindow = window.open('', '', 'width=600,height=400');
+        newWindow.document.write(`
+            <html>
+            <head><title>Print ID Card</title></head>
+            <body>${printContent}</body>
+            </html>
+        `);
+        newWindow.document.close();
+        newWindow.print();
+        newWindow.close();
+    }
+
+    // Listen for keydown event
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'p') {
+            event.preventDefault(); // Prevent the default print dialog
+            printIDCard(); // Call your print function
+        }
+    });
+</script>
+
+</body>
+</html>

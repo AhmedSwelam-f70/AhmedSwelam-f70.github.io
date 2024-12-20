@@ -1,0 +1,95 @@
+<!doctype html>
+<body>
+      <!--Header link Area-->
+      <div id="shared-layout-header"></div>
+      <script>
+          fetch('shared-layout-header.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('shared-layout-header').innerHTML = data;
+              });
+      </script>
+        <!-- Single member tab start-->
+        <div class="single-member-tab-area mg-t-0 mg-l-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+						<div class="single-member-pr">
+							<div class="row">
+                <!--Profile Pic Area-->
+								<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+									<div id="myTabContent1" class="tab-content">
+                    <!-- هنا الصورة الشخصية في ملف الشخص الاساسية-->
+										<div class="member-tab-list tab-pane fade active in" id="single-tab1">
+											<img src="pic/bg-1.jpg" alt="" />
+										</div>
+										<div class="member-tab-list tab-pane fade" id="single-tab2">
+											<img src="pic/bg-2.jpg" alt="" />
+										</div>
+										<div class="member-tab-list tab-pane fade" id="single-tab3">
+											<img src="pic/bg-3.jpg" alt="" />
+										</div>
+									</div>
+									<ul id="single-picture-tab">
+										<li class="active">
+											<a href="#single-tab1"><img src="pic/1.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#single-tab2"><img src="pic/2.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#single-tab3"><img src="pic/3.jpg" alt="" /></a>
+										</li>
+									</ul>
+								</div>
+                <!-- Profile Form Area-->
+								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<div class="single-member-details res-pro-tb text-right">
+										<h1>إستمارة التسجيل</h1>
+										<div class="single-pro-info">
+                                            <span class="single-regular">الأسم : </span>
+                                            <p class="profile-info">هنا البيانات من  قاعدة البيانات</p>
+
+											                      <span class="single-regular">الرقم القومي : </span>
+                                            <p class="profile-info">هنا البيانات من  قاعدة البيانات</p>
+                                                                                        
+                                            <span class="single-regular">رقم التليفون  : </span>
+                                            <p class="profile-info">هنا البيانات من  قاعدة البيانات</p>
+
+                                            <span class="single-regular"> المحافظة : </span>
+                                            <p class="profile-info">هنا البيانات من  قاعدة البيانات</p>
+
+                                            <span class="single-regular">المركز / المدينة  : </span>
+                                            <p class="profile-info">هنا البيانات من  قاعدة البيانات</p>
+
+                                            <span class="single-regular">الوظيفة  :</span>
+                                            <p class="profile-info">هنا البيانات من  قاعدة البيانات</p>
+
+                                        </div>
+                                    <!--Profile Button Area-->
+                                    <div class="profile-accept">
+                                        <a href="#" class="btn btn-primary" role="button" aria-pressed="true">قبول</a>
+                                        <a href="#" class="btn btn-danger " role="button" aria-pressed="true">رفض</a>
+                                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+        <!-- Single pro tab End-->
+
+                    <!--Footer link Area-->
+                    <div id="shared-layout-footer"></div>
+                    <script>
+                        fetch('shared-layout-footer.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('shared-layout-footer').innerHTML = data;
+                            });
+                    </script>
+
+
+      </body>

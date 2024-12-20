@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="ar">
+
+<body>
+  <!--Header link Area-->
+    <div id="shared-layout-header"></div>
+    <script>
+        fetch('shared-layout-header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('shared-layout-header').innerHTML = data;
+            });
+    </script>
+
+
+    <!--members status Area-->
+    <div class="member-status mg-l-30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="members-status-wrap">
+                        <!-- export data Bar-->
+                        <div class="export-data">
+                            <h4>قائمة الاعضاء</h4>
+                            <button type="button" class="btn btn-danger">إستخرج البيانات</button>
+                        </div>
+                        <!--Data Table Area-->
+                        <table class="member-data">
+                            <tr>
+                                <th>الصورة</th>
+                                <th>الإسم</th>
+                                <th>الرقم القومي</th>
+                                <th>رقم التليفون</th>
+                                <th>المحافظة</th>
+                                <th>الوظيفة</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                            <tr>
+                                <td><img src="img/new-product/5-small.jpg" alt="" /></td>
+                                <td>أحمد سويلم</td>
+                                <td>
+                                 30012180100297   
+                                </td>
+                                <td>01140025160</td>
+                                <td>القاهرة</td>
+                                <td> معلم</td>
+                                <td><button class="pd-setting">مراجعة البيانات</button></td>
+                                <td>
+                                    <button data-toggle="tooltip" title="view" class="pd-setting-ed" herf="profile-details.html"><a href="profile-details.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></button>
+                                    <button data-toggle="tooltip" title="Delete" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    <!-- Trigger/Open The Modal -->
+                                        <button onclick="openModal()" class="btn btn-primary" id="myBtn">طباعة</button>
+
+                                        <!-- The Modal -->
+                                        <div id="idCardModal">
+                                          <div id="idCard">
+                                              <div class="business-card">
+                                                  <div class="card-header">
+                                                      <img src="pic/logo-website.png" alt="شعار الشركة" class="company-logo">
+                                                  </div>
+                                      
+                                                  <div class="card-content">
+                                                      <img src="pic/pic.jpg" alt="الصورة الشخصية" class="profile-pic">
+                                                      <div class="info">
+                                                          <h1 class="name">محمد علي</h1>
+                                                          <p class="title">مهندس برمجيات</p>
+                                                          <p class="email">mohamed.ali@example.com</p>
+                                                          <p class="phone">+1234567890</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <button onclick="printIDCard()">Print ID Card</button>
+                                          </div>
+                                      </div>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                        <!--pagination Area-->
+                        <div class="custom-pagination">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">السابق</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">التالي</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer link Area-->
+    <div id="shared-layout-footer"></div>
+    <script>
+        fetch('shared-layout-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('shared-layout-footer').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
